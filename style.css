@@ -1,0 +1,498 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-boxs;
+}
+@font-face {
+    font-family: alata;
+    src: url(Alata-Regular.ttf);
+}
+@font-face {
+    font-family: josefin;
+    src: url(JosefinSans-VariableFont_wght.ttf);
+}
+body{
+    font-size: 15px;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/mobile/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.navbar{
+  
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+}
+.navbar .logo{
+    padding: 20px;
+    z-index:1;
+}
+.navbar #check{
+    display: none;
+}
+.navbar .menu{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 0%, 0%);
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    transition: all .3s ease-in-out;
+}
+.navbar .menu li{
+    margin: 20px;
+}
+.navbar .menu li a{
+    text-decoration: none;
+    color:  hsl(0, 0%, 100%);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    font-family: josefin;
+    font-weight: 300;
+}
+.navbar .menu li a:hover{
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+.navbar .check-btn{
+    padding: 28px 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.navbar .check-btn .icon{
+    width: 30px;
+    height: 2px;
+    background-color: hsl(0, 0%, 100%);
+    display: block;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.navbar .check-btn .icon::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    min-height: 2px;
+    background-color: hsl(0, 0%, 100%);
+    top: 7px;
+    transition: all .3s ease-in-out;
+}
+.navbar .check-btn .icon::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    min-height: 2px;
+    background-color: hsl(0, 0%, 100%);
+    top: -7px;
+    transition: all .3s ease-in-out;
+}
+.navbar #check:checked ~ .menu{
+    display: flex;
+}
+.navbar #check:checked  ~ .check-btn .icon{
+    background-color: transparent;
+}                  
+.navbar #check:checked  ~ .check-btn .icon::before{
+    transform: rotate(45deg);
+    top: 0;
+}   
+            
+.navbar #check:checked  ~ .check-btn .icon::after{
+    transform: rotate(-45deg);
+    top: 0;
+}   
+.hero-content{
+    margin: 20px;
+    margin-top: 120px;
+}
+.hero-content h1{
+    border: 1px  solid hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
+    font-size: 8vh;
+     padding: 20px 30px;
+     line-height: 57px;
+     font-weight: 300;
+     text-transform: uppercase;
+     font-family: josefin;
+}
+main{
+    margin: 20px 0px;
+}
+main .interactive{
+    display: grid;
+    margin: 0px auto;
+   gap: 1rem;
+   
+}
+main .interactive .image-content{
+    width: 95%;
+    background: url(images/mobile/image-interactive.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+    margin: 0px auto;
+}
+main  .interactive .content{
+    margin: 0px auto;
+    padding: 20px 40px;
+    text-align: center;  
+}
+main .interactive .content h1{
+    color: hsl(0, 0%, 0%);
+    font-family: josefin;
+    font-size: 6vh;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+main .interactive .content p{
+    color: hsl(0, 0%, 41%);
+    font-size: 1.3rem;
+    line-height: 25px;
+    font-family: alata;
+}
+main .creations{
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 60px;
+}
+main .creations h1{
+    color: hsl(0, 0%, 0%);
+    font-family: josefin;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+main .creations .see-btn{
+    border: 1px solid hsl(0, 0%, 0%);
+    max-width: 150px;
+    padding: 7px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    font-family: alata ;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    font-weight: 400;
+   margin: 0px auto;
+    grid-row: 3;
+    transition: all .5s ease-in-out;
+}
+main .creations .see-btn:hover{
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+main .creations .grid{
+    padding: 20px;
+    display: grid;
+    gap: 1.5rem;
+}
+main .creations .grid .column-1{
+    
+    background: url(images/mobile/image-deep-earth.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    min-height: 120px;
+}
+main .creations .grid .column-1 h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 2.5rem;
+    max-width: 50px;
+    font-family: josefin;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 45px;
+}
+
+main .creations .grid .column-2{
+    
+    background: url(images/mobile/image-night-arcade.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 20px;
+    min-height: 120px;
+}
+main .creations .grid .column-2 h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 2.5rem;
+    max-width: 50px;
+    font-family: josefin;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 75px;
+}
+main .creations .grid .column-3{
+    
+    background: url(images/mobile/image-soccer-team.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    min-height: 120px;
+}
+main .creations .grid .column-3 h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 2.1rem;
+    max-width: 200px;
+    font-family: josefin;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 45px;
+}
+main .creations .grid .column-4{
+    
+    background: url(images/mobile/image-grid.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    min-height: 120px;
+}
+main .creations .grid .column-4 h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 2.5rem;
+    max-width: 50px;
+    font-family: josefin;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 45px;
+}
+main .creations .grid .column-5{
+    
+    background: url(images/mobile/image-from-above.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    min-height: 120px;
+}
+main .creations .grid .column-5 h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 2.1rem;
+    max-width: 200px;
+    font-family: josefin;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 45px;
+}
+main .creations .grid .column-6{
+    
+    background: url(images/mobile/image-pocket-borealis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    min-height: 120px;
+}
+main .creations .grid .column-6 h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 2.5rem;
+    max-width: 50px;
+    font-family: josefin;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 45px;
+}
+main .creations .grid .column-7{
+    
+    background: url(images/mobile/image-curiosity.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    min-height: 120px;
+}
+main .creations .grid .column-7 h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 2.5rem;
+    max-width: 50px;
+    font-family: josefin;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 45px;
+}
+main .creations .grid .column-8{
+    
+    background: url(images/mobile/image-fisheye.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    min-height: 120px;
+}
+main .creations .grid .column-8 h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 2.1rem;
+    max-width: 200px;
+    font-family: josefin;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 45px;
+}
+footer{
+    background-color: hsl(0, 0%, 0%);
+    padding: 20px;
+    text-align: center;
+}
+footer .logo{
+    padding: 20px 0px;
+}
+footer ul li{
+    margin-bottom: 20px;
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-family: alata;
+    font-size: 1.1rem;
+}
+footer ul li a:hover{
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+footer .social{
+    margin-top: 20px;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+footer p{
+    color: hsl(0, 0%, 41%);
+    font-family: alata;
+    font-size: 1.3rem;
+    margin: 20px 0px;
+}
+
+@media (min-width:768px){
+    header{
+        background: url(images/desktop/image-hero.jpg);
+    }
+    .navbar {
+        width: 85%;
+        padding: 60px 40px;
+        margin: 0px auto;
+    }
+   
+    .navbar .menu{
+        display: flex;
+        background-color: transparent;
+        flex-direction: row;
+        padding: 0px 0px;
+        gap: 1.3rem;
+        justify-content: flex-end;
+         width: 95%;
+         top: 90px;
+    }
+    .navbar .menu li{
+        margin: 0px;
+        
+    }
+    .navbar .menu li a{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .navbar .check-btn{
+        display: none;
+    }
+    .hero-content{
+        max-width: 450px;
+        margin-left: 100px;
+        margin-top: 60px;
+    }
+    .interactive{
+        width: 90%;
+        min-height: 350px;
+       grid-template-columns: 1fr 1fr;
+       gap: 1rem;
+       position: relative;
+       align-items: center;
+    }
+    .interactive .image-content{
+        max-width: 800px;
+         background: url(images/desktop/image-interactive.jpg);
+    }
+    .interactive .content{
+        background-color: hsl(0, 0%, 100%);
+        position: absolute;
+        max-width: 400px;
+        left: 420px;
+        padding: 10px;
+        bottom: -20px;
+    }
+    main .interactive .content h1{
+        font-size: 1.8rem;
+    }
+    main .interactive .content p{
+        font-size: .9rem;
+    }
+    main .creations{
+      grid-template-areas: " one two" "three  three";
+      gap:0;
+    }
+    main .creations h1{
+        grid-area: one;
+        text-align: left;
+        padding: 10px 30px;
+
+    }
+    main .creations .grid{
+        height: auto;
+        grid-area: three;
+         grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+       
+    } 
+    main .creations .grid > div {
+        height: 300px;
+        display: flex;
+        align-items: flex-end;
+    }
+    main .creations .grid .column-2{
+        height: 340px;
+    }
+   main .creations .see-btn{
+    grid-area: two;
+    grid-row: 1;
+    align-items: end;
+   }
+   footer{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    justify-content: center;
+    align-items: center;
+
+   }
+   footer .social{
+    grid-column: 2;
+    grid-row: 1;
+   
+   }
+   footer ul{
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+   }
+   footer .attribution{
+    margin: 0px auto;
+    grid-column: 1/span 2;
+   }
+
+  
+}
